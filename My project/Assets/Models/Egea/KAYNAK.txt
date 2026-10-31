@@ -1,0 +1,8 @@
+Araba modeli kaynağı (lisans gereği oyunun "Emeği Geçenler" bölümünde de yazılmalı)
+
+"Fiat Tipo Wagon" — Nieve5677 (Sketchfab)
+https://sketchfab.com/3d-models/fiat-tipo-wagon-093e7496681e4f608a536c297d9c28cd
+Lisans: Creative Commons Attribution 4.0 (CC BY 4.0) — https://creativecommons.org/licenses/by/4.0/
+
+Değişiklikler: plakalar kaldırıldı, üçgen sayısı azaltıldı, tekerlekler / direksiyon / arka kapak ayrı parçalara
+ayrıldı, malzemeler oyunun malzemeleriyle değiştirildi (gövde rengi kırmızı). Dönüştürme: Tools~/Blender/tipo.py

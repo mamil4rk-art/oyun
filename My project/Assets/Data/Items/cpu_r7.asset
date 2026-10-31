@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e3148dc81dc4b86784934c1f84a0, type: 3}
+  m_Name: cpu_r7
+  m_EditorClassIdentifier: Assembly-CSharp::ComponentData
+  itemId: cpu_r7
+  displayName: "Voltrix R7 \u0130\u015Flemci"
+  description: 
+  category: 0
+  icon: {fileID: 0}
+  wholesalePrice: 8500
+  marketPrice: 10500
+  boxSize: {x: 0.14, y: 0.07, z: 0.14}
+  boxColor: {r: 0.85, g: 0.25, b: 0.1, a: 1}
+  mass: 0.3
+  componentType: 0
+  socket: 1
+  memoryType: 0
+  powerDraw: 105
+  psuWattage: 0
+  performanceScore: 80

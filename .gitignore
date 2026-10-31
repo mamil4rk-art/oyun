@@ -1,0 +1,19 @@
+# Unity generated
+/My project/[Ll]ibrary/
+/My project/[Tt]emp/
+/My project/[Oo]bj/
+/My project/[Bb]uild/
+/My project/[Bb]uilds/
+/My project/[Ll]ogs/
+/My project/[Uu]ser[Ss]ettings/
+/My project/MemoryCaptures/
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+*.blend1
+
+# Local tool settings
+.claude/
