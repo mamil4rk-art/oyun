@@ -165,7 +165,7 @@ Amaç: en kısa yoldan **ilk oynanabilir döngü** (para kazanıp harcayabilmek)
 - [ ] Ana menü, ayarlar (fare hassasiyeti, ses, grafik kalitesi, tuşlar)
 - [ ] Canvas / UI Toolkit ile kalıcı arayüz (OnGUI HUD'un yerine)
 - [ ] Gece/gündüz ışığı: akşam sokak lambaları, dükkân ışıkları, araba farları
-- [ ] Windows build (.exe)
+- [~] Windows build (.exe): `PC Shop → Windows İçin Derle (.exe)` menüsü (`Editor/WindowsBuild.cs`), çıktı `Builds/Windows`. Esc → "Oyundan Çık" düğmesi.
 
 ---
 

@@ -57,6 +57,20 @@ public class GameHUD : MonoBehaviour
         if (Time.time < messageUntil)
             ShadowLabel(new Rect(25, 70, 1200, 40), message, msgStyle);
 
+        // Esc ile fare serbestken: oyundan çıkış düğmesi (.exe'de pencereyi kapatmanın yolu)
+        if (Cursor.lockState != CursorLockMode.Locked)
+        {
+            float bw = 220 * (h / 1080f), bh = 50 * (h / 1080f);
+            if (GUI.Button(new Rect(w - bw - 25, 20, bw, bh), "Oyundan Çık"))
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#else
+                Application.Quit();
+#endif
+            }
+        }
+
         // Alışveriş arabası durumu
         var cart = interactor != null ? interactor.PushedCart : null;
         if (cart != null)
