@@ -1,0 +1,51 @@
+# Oyunu GitHub'da Windows için derler; sonuç "Actions" sekmesinden indirilir.
+# Gerekli gizli anahtarlar (Settings → Secrets and variables → Actions):
+#   UNITY_LICENSE  : Unity_lic.ulf dosyasının içeriği
+#   UNITY_EMAIL    : Unity hesabının e-postası
+#   UNITY_PASSWORD : Unity hesabının şifresi
+name: Oyunu Derle (Windows)
+
+on:
+  workflow_dispatch: # Elle: Actions → Oyunu Derle (Windows) → Run workflow
+
+jobs:
+  derle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Diskte yer aç
+        uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: false
+
+      - name: Projeyi indir
+        uses: actions/checkout@v4
+
+      - name: Unity Library önbelleği
+        uses: actions/cache@v4
+        with:
+          path: My project/Library
+          key: Library-Windows-${{ hashFiles('My project/Assets/**', 'My project/Packages/**', 'My project/ProjectSettings/**') }}
+          restore-keys: Library-Windows-
+
+      - name: Unity ile derle
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: My project
+          targetPlatform: StandaloneWindows64
+          buildName: PC Dukkani Simulatoru
+
+      - name: Oyunu indirilebilir yap
+        uses: actions/upload-artifact@v4
+        with:
+          name: PC-Dukkani-Simulatoru-Windows
+          path: build/StandaloneWindows64
+          retention-days: 30
